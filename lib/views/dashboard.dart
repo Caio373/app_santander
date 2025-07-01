@@ -87,13 +87,14 @@ class _DashboardState extends State<Dashboard> {
                 child: Column(
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: 
+                      MainAxisAlignment.spaceBetween,
                       children: [
                         Row(
                           children: [
-                            Icon(Icons.monetization_on),
+                            Icon(Icons.monetization_on, color: Colors.red,),
                             SizedBox(width:10),
-                            Text("Saldo da conta"),
+                            Text("Saldo disponivel"),
                           ],
                         ),
                         IconButton(onPressed:(){
@@ -110,16 +111,41 @@ class _DashboardState extends State<Dashboard> {
         children: [
           Text(
             'R\$ 100.000.000,00',
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: 
+            TextStyle(
+              fontWeight: FontWeight.bold, 
+              fontSize: 16
+              ),
           ),
           Text(
-            'Saldo + Limite R\$143,34',
-            style: TextStyle(fontWeight: FontWeight.bold),
+            'Saldo + Limite R\$100.000.000,00',
+            style: 
+            TextStyle(
+              fontWeight: FontWeight.bold
+              ),
           ),
           Text(
-            'Entenda seu limiti',
-            style: TextStyle(fontWeight: FontWeight.bold),
+            'Entenda seu limite',
+            style: TextStyle(
+              fontWeight: 
+              FontWeight.bold, 
+              color: Colors.red, 
+              decoration: TextDecoration.underline
+              ),
           ),
+          Divider(),
+          Row( 
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Ver extrato", 
+                style: TextStyle(
+                  fontSize: 18, 
+                  color: Colors.red
+              ),
+              ),
+              ],
+              ),
         ],
       )
     : Container()
